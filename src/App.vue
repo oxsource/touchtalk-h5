@@ -1,28 +1,37 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ChatInputBox class="input-box"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ChatInputBox from './components/ChatInputBox.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ChatInputBox
   }
 }
 </script>
 
-<style lang="scss">
+<style>
+html, body {
+  height: 100%;
+  user-select: none;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  position: relative;
+  height: 100%;
+}
+.input-box {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 </style>
